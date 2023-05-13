@@ -1,4 +1,6 @@
 import NavbarItem from "./NavbarItem";
+import {BsChevronDown } from 'react-icons/bs'
+import MobileMenu from '@/components/MobileMenu';
 
 const Navbar = () => {
   return (
@@ -12,6 +14,11 @@ const Navbar = () => {
           <NavbarItem label="New & Popular" />
           <NavbarItem label="My List" />
           <NavbarItem label="Browse by Languages" />
+        </div>
+        <div className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
+          <p className="text-white text-sm">Browse</p>
+          <BsChevronDown className="text-white transition"  />
+          <MobileMenu visible />
         </div>
       </div>
     </nav>
